@@ -295,3 +295,4 @@ COMMIT;
 	-- SELECT livre.Titre FROM livre INNER JOIN livre_has_user ON LIVRE_idLIVRE=livre.idLIVRE WHERE dateretoureffective IS NULL
 
 -- LISTE USAGERS EN RETARD POUR LEUR(S) RETOUR(S)
+	-- SELECT user.idUSER FROM user INNER JOIN livre_has_user ON USER_idUSER=user.idUSER WHERE CURRENT_DATE()>dateretoureffective OR dateretoureffective IS NULL AND CURRENT_DATE>dateretourattendue
